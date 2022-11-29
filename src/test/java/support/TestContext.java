@@ -18,6 +18,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.yaml.snakeyaml.Yaml;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -111,5 +117,21 @@ public class TestContext {
         } else {
             throw new RuntimeException("Unsupported test environment: " + testEnv);
         }
+    }
+
+    //The two methods "getStream" and "getDataByFileName" allow us to create
+    //the map that links our step defs Map to the yml file :)
+    private static InputStream getStream(String fileName) {
+        String path = System.getProperty("user.dir") +
+                "/src/test/resources/data/" + fileName + ".yml";
+        try {
+            return new FileInputStream(path);
+        } catch (FileNotFoundException e) {
+            throw new Error(e);
+        }
+    }
+
+    public static Map<String, String> getDataByFileName(String fileName) {
+        return new Yaml().load(getStream(fileName));
     }
 }

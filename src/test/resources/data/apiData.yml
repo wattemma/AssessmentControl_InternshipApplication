@@ -1,0 +1,121 @@
+newQuiz :
+  '{
+  "name": "eQuiz Automation",
+  "totalScore": 18,
+  "passingPercentage": 75,
+  "showStopperQuestion": 1,
+  "questions": [
+    {
+      "type": "TEXTUAL",
+      "question": "What is your name?",
+      "score": 5
+    },
+    {
+      "type": "SINGLE_CHOICE",
+      "question": "Which city is city largest in California?",
+      "score": 7,
+      "answer": 2,
+      "hasOtherOption": false,
+      "options": [
+        "San Francisco",
+        "Sacramento",
+        "Los Angeles",
+        "Redding"
+      ]
+    },
+    {
+      "type": "MULTIPLE_CHOICE",
+      "question": "Who was apple founded by?",
+      "score": 6,
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "hasOtherOption": true,
+      "options": [
+        "Steve Jobs",
+        "Steve Wozniak",
+        "Ronald Wayne",
+        "Ronald Reagan"
+      ]
+    }
+  ]
+}'
+
+newQuiz_Updated:
+  '{
+  "name": "eQuiz Automation Updated",
+  "totalScore": 18,
+  "passingPercentage": 75,
+  "showStopperQuestion": 1,
+  "questions": [
+    {
+      "type": "TEXTUAL",
+      "question": "What is your name?",
+      "score": 5
+    },
+    {
+      "type": "SINGLE_CHOICE",
+      "question": "Which city is city largest in California?",
+      "score": 7,
+      "answer": 2,
+      "hasOtherOption": false,
+      "options": [
+        "San Francisco",
+        "Sacramento",
+        "Los Angeles",
+        "Redding"
+      ]
+    },
+    {
+      "type": "MULTIPLE_CHOICE",
+      "question": "Who was apple founded by?",
+      "score": 6,
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "hasOtherOption": true,
+      "options": [
+        "Steve Jobs",
+        "Steve Wozniak",
+        "Ronald Wayne",
+        "Ronald Reagan"
+      ]
+    }
+  ]
+}'
+newTeacherName :
+  '{
+    "newName": "awesomeTeacher"
+  }'
+newStudentName :
+  '{
+    "name": "myNewNameee"
+  }'
+newStudentGroup:
+  ' {
+    "group": "N001"
+  }'
+newStudentRole:
+  '{
+    "role": "STUDENT"
+  }'
+studentCredentials:
+  '{
+    "email": "jon.snow@gameofthronesssf.com",
+    "password": "GameOfThrones"
+  }'
+
+signUpStudentCredentials:
+  '{
+    "email": "jon.snow@gameofthronesssf.com",
+    "name": "Jon Snowkjhh",
+    "password": "GameOfThronesh",
+    "group" : "ABC"
+  }'
+
+
+
