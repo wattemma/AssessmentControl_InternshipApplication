@@ -3,12 +3,26 @@ Feature: REST API CRUD
   #http://ask-internship.portnov.com/api-doc/#/
   #base url: http://ask-internship.portnov.com/api/v1
 
+
   @rest1
+  Scenario: Quiz API (Teachers only) , REST API CRUD
+    Given I sign in as a teacher
+    And I get all the quizzes
+    And I create a new quiz
+    Then I assert the new quiz was created
+    When I update the new quiz
+    Then I assert the new quiz was updated
+    When I delete the new quiz
+    Then I assert the new quiz was deleted
+
+  @rest2
       #Authorization API
   Scenario: Authorization API , REST API CRUD
-    Given I sigh up for a new student account
-    #connecting to the DB isn't working
-#    And I do GET db request
+#    Given I sigh up for a new student account
+    #connecting to the DB
+#    Then I get the activation token from the db for user "email"
+#    And I activate the user account with token
+
     #And I GET activate student
 #    And I sign in as a student
 
@@ -18,16 +32,6 @@ Feature: REST API CRUD
 #    Then I confirm my password is reset
 
 
-#  @rest1
-#  Scenario: Quiz API (Teachers only) , REST API CRUD
-#    Given I sign in as a teacher
-#    And I get all the quizzes
-#    And I create a new quiz
-#    Then I assert the new quiz was created
-#    When I update the new quiz
-#    Then I assert the new quiz was updated
-#    When I delete the new quiz
-#    Then I assert the new quiz was deleted
 
   @rest3
 #      User API (Teachers only)

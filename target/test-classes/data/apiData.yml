@@ -109,13 +109,8 @@ studentCredentials:
     "password": "GameOfThrones"
   }'
 
-signUpStudentCredentials:
-  '{
-    "email": "jon.snow@gameofthronesssf.com",
-    "name": "Jon Snowkjhh",
-    "password": "GameOfThronesh",
-    "group" : "ABC"
-  }'
+signUpStudentCredentials: jon.snow@gameofthronesssf.com"
+
 
 
 

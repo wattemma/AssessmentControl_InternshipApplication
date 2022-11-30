@@ -349,10 +349,6 @@ b
 2src/test/java/pages/Quote/Quote_SubmittedPage.java,2/1/213cde334c061c3986cf821dd55ffec243bc3a4d
 `
 0src/test/java/definitions/QuoteOOP_Stepdefs.java,c/f/cf6c085c8d5b72bea377b092d52b7de41cfec11e
-_
-/src/test/java/definitions/RestApi_Stepdefs.java,b/d/bdc3ce2620b441519d9a8cfe44adf74780c50b73
-`
-0src/test/java/pages/ConfirmRegistrationPage.java,4/3/43fe4ec7504ed506a248c4a10dfdf40dfbf16d7a
 T
 $src/test/java/pages/GenericPage.java,d/1/d1f649500a471adb592577d7041a35937a084d30
 Y
@@ -363,15 +359,11 @@ P
  src/test/java/pages/IHasURL.java,2/c/2c47c6ab162ee88498b3547b58ce6fc2c63ff7f6
 R
 "src/test/java/pages/LoginPage.java,2/f/2febc867dad266b12f3cf09596e572e0dcf37dbf
-Y
-)src/test/java/pages/RegistrationPage.java,7/0/705c52e81e81bc6a508de54ed0ba77082630225f
 U
 %src/test/java/support/TestRunner.java,0/6/0668a12ac3b209489a0bddefd687ce4142da0755
 P
  src/test/java/support/Hooks.java,a/5/a5111116acb759886c67e8f0e9793df0dd585868
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-i
-9src/test/java/definitions/StudentRestStepDefs_needDB.java,1/6/16b6d6fa3d54e6cc7d20fee211e3aa9ea1ed4b93
 _
 /src/test/java/definitions/Generic_Stepdefs.java,c/b/cbfe797016c5c325cd1d46e7bcc9b75b3ec35021

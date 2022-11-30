@@ -5,10 +5,12 @@ import io.cucumber.java.en.When;
 import pages.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import support.DB_ConnectionHelper;
 import support.TestContext;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,6 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class AccessmentControl_Stepdefs {
+
 
     LoginPage loginPage = new LoginPage();
     HomePage_Teacher homeTeacherPage = new HomePage_Teacher();
@@ -127,8 +130,28 @@ public class AccessmentControl_Stepdefs {
     @When("I validate my email")
     public void iValidateMyEmail() {
     }
+//DB CONNECTIONNNNNNNNNNN
+    private Integer userId;
+    private String activationCode;
 
+    @Then("I get the activation token from the db for the user")
+    public void iGetTheActivationTokenFromTheDbForTheUser() throws SQLException {
+        String tokenAndId = DB_ConnectionHelper.getAccessToken(studentData.get("email"));
+        System.out.println("Our DB results are: " + tokenAndId);
 
+        //separate the two values
+        String[] value = tokenAndId.split(";");
+
+        userId = Integer.valueOf(value[0]);
+        activationCode = value[1];
+
+        System.out.println("the separated values are: "+ value[0]+" and "+ value[1]);
+    }
+
+    @And("I  activate the account with the token")
+    public void iActivateTheAccountWithTheToken() throws IOException {
+        DB_ConnectionHelper.activateUser(userId, activationCode);
+    }
 }
 
 
